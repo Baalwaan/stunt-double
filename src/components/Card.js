@@ -25,10 +25,9 @@ const Img = styled.img`
 const Card = props => {
   const dragStart = e => {
     const target = e.target;
-
     e.dataTransfer.setData('card_id', target.id);
     console.log('this is', e.target.firstChild.textContent);
-    setTimeout(() => (target.style.display = 'none'), 0);
+    // setTimeout(() => (target.style.display = 'none'), 0);
   };
 
   const dragOver = e => {
@@ -38,13 +37,14 @@ const Card = props => {
   return (
     <Profile
       id={props.id}
-      draggable={true}
+      draggable="true"
       onDragStart={dragStart}
       onDragOver={dragOver}
     >
       <h1>{props.name}</h1>
       <Img src={props.img_url} />
       <p>{props.quote}</p>
+      {/* {props.children} */}
     </Profile>
   );
 };

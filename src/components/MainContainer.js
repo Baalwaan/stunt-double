@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import Card from './Card';
 import Buttons from './Buttons';
-import utils from './utils';
 
 const Container = styled.div`
 width: 30em
@@ -25,12 +24,13 @@ const ProfileHolder = styled.div`
   margin 1em 0;
 `;
 
-const MainContainer = () => {
+const MainContainer = props => {
   return (
     <Container>
       <ProfileHolder>
-        {utils.map(profile => (
+        {props.profiles.map(profile => (
           <Card
+            id={profile.name}
             name={profile.name}
             quote={profile.quote}
             img_url={profile.img_url}
