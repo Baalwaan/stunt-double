@@ -27,7 +27,7 @@ const Card = props => {
     const target = e.target;
 
     e.dataTransfer.setData('card_id', target.id);
-
+    console.log('this is', e.target.firstChild.textContent);
     setTimeout(() => (target.style.display = 'none'), 0);
   };
 
