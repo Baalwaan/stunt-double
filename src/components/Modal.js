@@ -98,13 +98,10 @@ font-size: 1.1em
 `;
 
 const Modal = props => {
-  const HandleApp = props => {
-    props.incrementID(props.id + 1);
-  };
   return (
     <BgModal>
       <ModalContainer>
-        {props.shortListedStunts && props.profileStack === 0 ? (
+        {props.shortListedStunts.length == 0 && props.profileStack === 0 ? (
           <Title style={{ margin: '1em' }}>
             You have not shortlisted anyone.
           </Title>
