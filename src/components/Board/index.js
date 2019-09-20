@@ -1,28 +1,13 @@
 import React from 'react';
-import styled from 'styled-components';
-import Card from './Card';
 
-const Container = styled.div`
-  width: 10em;
-  height: 10em;
-  // border: solid black 2px;
-  // margin: auto;
-
-  @media only screen and (max-width: 680px) {
-    display: none;
-  }
-`;
-
-const IMG = styled.img`
-  width: 100%;
-  height: 100%;
-`;
+// styledcomponents
+import { Container, IMG } from './styled.components';
 
 const Board = props => {
   const handleProfileStack = card_id => {
     props.updateProfileStack(props.profileStack - 1);
     const updatedList = props.profileList.filter(
-      profile => profile.name != card_id
+      profile => profile.name !== card_id
     );
     props.updateProfileList(updatedList);
   };
@@ -30,7 +15,7 @@ const Board = props => {
   const handleUpdateShortlist = card_id => {
     props.updateShortList(props.shortListedStunts.concat(card_id));
     const updatedList = props.profileList.filter(
-      profile => profile.name != card_id
+      profile => profile.name !== card_id
     );
     props.updateProfileList(updatedList);
   };
@@ -47,7 +32,7 @@ const Board = props => {
       const card = document.getElementById(card_id);
       card.style.display = 'block';
 
-      if (e.target.id == 'board-two') {
+      if (e.target.id === 'board-two') {
         handleUpdateShortlist(card_id);
       }
       handleProfileStack(card_id);

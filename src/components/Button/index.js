@@ -1,21 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
 
-import Yes from '../assets/yes.png';
-import No from '../assets/no.png';
+// styledcomponents
+import { Container, Img } from './styled-components';
 
-const Container = styled.div`
-  width: 80%;
-  display: flex;
-  justify-content: space-around;
-`;
-
-const Img = styled.img`
-  cursor: pointer;
-  :active {
-    transform: scale(1.2);
-  }
-`;
+// images of yes no buttons
+import Yes from '../../assets/yes.png';
+import No from '../../assets/no.png';
 
 const Buttons = props => {
   //Length of profileList
@@ -26,7 +16,7 @@ const Buttons = props => {
     props.updateShortList(props.shortListedStunts.concat(currentProfile));
     props.updateProfileStack(props.profileStack - 1);
     const updatedList = props.profileList.filter(
-      profile => profile.name != currentProfile
+      profile => profile.name !== currentProfile
     );
     props.updateProfileList(updatedList);
   };
@@ -35,7 +25,7 @@ const Buttons = props => {
     const currentProfile = props.profileList[length - 1].name;
     props.updateProfileStack(props.profileStack - 1);
     const updatedList = props.profileList.filter(
-      profile => profile.name != currentProfile
+      profile => profile.name !== currentProfile
     );
     props.updateProfileList(updatedList);
   };

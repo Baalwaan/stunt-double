@@ -1,28 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
-import Card from './Card';
-import Buttons from './Buttons';
 
-const Container = styled.div`
-  // width: 30em
-  // border: solid black 2px;
-  // margin: auto;
-  // padding: 1em;
-  // height: 100vh;
-  background: transparent;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
+// styledcomponents
+import { Container, ProfileHolder } from './styled-components';
 
-const ProfileHolder = styled.div`
-  position: relative;
-//   border: solid purple 10px;
-  width: 18em;
-  height: 25em;
-  margin 1em 0;
-`;
+// components
+import Card from '../Card/index';
+import Buttons from '../Button/index';
 
 const MainContainer = props => {
   return (
@@ -30,6 +13,7 @@ const MainContainer = props => {
       <ProfileHolder>
         {props.profileList.map(profile => (
           <Card
+            key={profile.name}
             id={profile.name}
             name={profile.name}
             quote={profile.quote}
@@ -39,7 +23,6 @@ const MainContainer = props => {
       </ProfileHolder>
 
       <Buttons
-        // profiles={props.profiles}
         profileStack={props.profileStack}
         updateProfileStack={props.updateProfileStack}
         shortListedStunts={props.shortListedStunts}
