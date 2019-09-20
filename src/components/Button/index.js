@@ -16,7 +16,7 @@ const Buttons = props => {
     props.updateShortList(props.shortListedStunts.concat(currentProfile));
     props.updateProfileStack(props.profileStack - 1);
     const updatedList = props.profileList.filter(
-      profile => profile.name != currentProfile
+      profile => profile.name !== currentProfile
     );
     props.updateProfileList(updatedList);
   };
@@ -25,7 +25,7 @@ const Buttons = props => {
     const currentProfile = props.profileList[length - 1].name;
     props.updateProfileStack(props.profileStack - 1);
     const updatedList = props.profileList.filter(
-      profile => profile.name != currentProfile
+      profile => profile.name !== currentProfile
     );
     props.updateProfileList(updatedList);
   };

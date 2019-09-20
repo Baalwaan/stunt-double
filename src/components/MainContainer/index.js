@@ -13,6 +13,7 @@ const MainContainer = props => {
       <ProfileHolder>
         {props.profileList.map(profile => (
           <Card
+            key={profile.name}
             id={profile.name}
             name={profile.name}
             quote={profile.quote}
@@ -22,7 +23,6 @@ const MainContainer = props => {
       </ProfileHolder>
 
       <Buttons
-        // profiles={props.profiles}
         profileStack={props.profileStack}
         updateProfileStack={props.updateProfileStack}
         shortListedStunts={props.shortListedStunts}

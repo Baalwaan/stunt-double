@@ -1,7 +1,6 @@
 import React from 'react';
 
 // styledcomponents
-
 import {
   BgModal,
   Title,
@@ -25,7 +24,7 @@ const Modal = props => {
   return (
     <BgModal>
       <ModalContainer>
-        {props.shortListedStunts.length == 0 && props.profileStack === 0 ? (
+        {props.shortListedStunts.length === 0 && props.profileStack === 0 ? (
           <Title style={{ margin: '1em' }}>
             You have not shortlisted anyone.
           </Title>

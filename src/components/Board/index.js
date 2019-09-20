@@ -7,7 +7,7 @@ const Board = props => {
   const handleProfileStack = card_id => {
     props.updateProfileStack(props.profileStack - 1);
     const updatedList = props.profileList.filter(
-      profile => profile.name != card_id
+      profile => profile.name !== card_id
     );
     props.updateProfileList(updatedList);
   };
@@ -15,7 +15,7 @@ const Board = props => {
   const handleUpdateShortlist = card_id => {
     props.updateShortList(props.shortListedStunts.concat(card_id));
     const updatedList = props.profileList.filter(
-      profile => profile.name != card_id
+      profile => profile.name !== card_id
     );
     props.updateProfileList(updatedList);
   };
@@ -32,7 +32,7 @@ const Board = props => {
       const card = document.getElementById(card_id);
       card.style.display = 'block';
 
-      if (e.target.id == 'board-two') {
+      if (e.target.id === 'board-two') {
         handleUpdateShortlist(card_id);
       }
       handleProfileStack(card_id);
