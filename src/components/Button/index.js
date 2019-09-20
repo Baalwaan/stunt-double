@@ -1,21 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
 
-import Yes from '../assets/yes.png';
-import No from '../assets/no.png';
+// styledcomponents
+import { Container, Img } from './styled-components';
 
-const Container = styled.div`
-  width: 80%;
-  display: flex;
-  justify-content: space-around;
-`;
-
-const Img = styled.img`
-  cursor: pointer;
-  :active {
-    transform: scale(1.2);
-  }
-`;
+// images of yes no buttons
+import Yes from '../../assets/yes.png';
+import No from '../../assets/no.png';
 
 const Buttons = props => {
   //Length of profileList

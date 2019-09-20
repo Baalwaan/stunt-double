@@ -1,12 +1,6 @@
 import React from 'react';
-// import './app.css';
 
-// import Main from './components/MainContainer';
-// import Board from './components/Board';
-import Modal from './components/Modal';
-
-// import ShortList from './assets/list-icon.png';
-// import Bin from './assets/trash-icon.png';
+import Modal from './components/Modal/';
 
 // utils;
 import utils from './components/utils';

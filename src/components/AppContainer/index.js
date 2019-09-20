@@ -1,22 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
 
-import ShortList from '../assets/list-icon.png';
-import Bin from '../assets/trash-icon.png';
+// styledcomponent
+import Container from './styled-components';
 
-import Main from './MainContainer';
-import Board from './Board';
+import ShortList from '../../assets/list-icon.png';
+import Bin from '../../assets/trash-icon.png';
+
+import Main from '../MainContainer/index';
+import Board from '../Board/index';
 // import Modal from './components/Modal';
-
-const Container = styled.div`
-  width: 100vw;
-  min-height: 100vh;
-  /* border: solid red 5px; */
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  /* background: green; */
-`;
 
 const AppContainer = props => {
   return (
