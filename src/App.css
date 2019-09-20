@@ -1,8 +1,9 @@
 .App {
   width: 100vw;
   min-height: 100vh;
+  /* border: solid red 5px; */
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  align-content: center;
+  /* background: green; */
 }
