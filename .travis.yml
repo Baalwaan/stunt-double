@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+  - 'node'
+script:
+  - npm i -g now
+  - npm run test
+after_success:
+  - now --public --token=$NOW_TOKEN
