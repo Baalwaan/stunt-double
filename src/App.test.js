@@ -20,7 +20,7 @@ test('testing if Yes/No buttons are clickable', () => {
   fireEvent.click(yesButton);
   fireEvent.click(noButton);
   fireEvent.click(yesButton);
-  fireEvent.click(noButto11n);
+  fireEvent.click(noButton);
   fireEvent.click(noButton);
   // fireEvent.drag(profileCard);
 });
