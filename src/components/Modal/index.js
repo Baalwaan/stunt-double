@@ -62,7 +62,9 @@ const Modal = props => {
             );
           })}
         </CandidateList>
-        <Button onClick={() => window.location.reload()}>search more</Button>
+        <Button onClick={() => window.location.reload()} title="Restart search">
+          search more
+        </Button>
       </ModalContainer>
     </BgModal>
   );
