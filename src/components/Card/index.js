@@ -21,11 +21,11 @@ const Card = props => {
       onDragStart={dragStart}
       onDragOver={dragOver}
       className={'profiles'}
+      title={`${props.id} profile card`}
     >
       <h1>{props.name}</h1>
-      <Img draggable="false" src={props.img} />
-      <p>{props.quote}</p>
-      {/* {props.children} */}
+      <Img draggable="false" src={props.img} title={`${props.name} image`} />
+      <p title="quote">{props.quote}</p>
     </Profile>
   );
 };
