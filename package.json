@@ -14,8 +14,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "now ./out --static --no-clipboard --token=$NOW_TOKEN --public"
+    "eject": "react-scripts eject"
+    // "deploy": "now ./out --static --no-clipboard --token=$NOW_TOKEN --public"
   },
   "eslintConfig": {
     "extends": "react-app"
