@@ -33,12 +33,14 @@ const Modal = props => {
         )}
 
         <CandidateList>
-          {props.shortListedStunts.map(name => {
+          {props.shortListedStunts.map((name, acc) => {
+            ++acc;
+
             const img = props.profiles.filter(profile =>
               profile.name.includes(name) ? profile.img : null
             );
             return (
-              <Profile>
+              <Profile key={acc}>
                 <Img src={img[0].img}></Img>
                 <Contact>
                   <P>{name}</P>
@@ -60,7 +62,7 @@ const Modal = props => {
                 </Contact>
               </Profile>
             );
-          })}
+          }, 0)}
         </CandidateList>
         <Button onClick={() => window.location.reload()} title="Restart search">
           search more
