@@ -32,8 +32,8 @@ const Buttons = props => {
 
   return (
     <Container>
-      <Img src={Yes} onClick={handleYes} />
-      <Img src={No} onClick={handleNo} />
+      <Img src={Yes} onClick={handleYes} title="Yes" alt="Yes button" />
+      <Img src={No} onClick={handleNo} title="No" alt="No Button" />
     </Container>
   );
 };
