@@ -3,6 +3,6 @@ node_js:
   - 'node'
 script:
   - npm run test
-
+  
   on:
   branch: master
