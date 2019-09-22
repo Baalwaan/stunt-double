@@ -10,7 +10,7 @@ it('renders without crashing', () => {
 });
 
 test('testing if Yes/No buttons are clickable', () => {
-  const { getByTitle } = render(<App></App>);
+  const { getByTitle, getByText } = render(<App></App>);
 
   const yesButton = getByTitle('Yes');
   const noButton = getByTitle('No');
@@ -22,5 +22,5 @@ test('testing if Yes/No buttons are clickable', () => {
   fireEvent.click(yesButton);
   fireEvent.click(noButton);
   fireEvent.click(noButton);
-  // fireEvent.drag(profileCard);
+  const searchAgainButton = getByText('search more');
 });
