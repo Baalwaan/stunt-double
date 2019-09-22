@@ -6,4 +6,4 @@ script:
   - npm run test
 
 after_success:
-  - now --public --token=$NOW_TOKEN
+  - now --prod --token=$NOW_TOKEN
