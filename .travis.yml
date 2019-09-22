@@ -2,11 +2,7 @@ language: node_js
 node_js:
   - 'node'
 script:
-  - npm i -g now
   - npm run test
 
   on:
   branch: master
-
-# after_success:
-#   - now --prod --token=$NOW_TOKEN
