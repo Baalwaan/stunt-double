@@ -16,7 +16,7 @@ const App = () => {
   );
   return (
     <>
-      <h1>Find your stunt doubles (testing if this commit pushes)!</h1>
+      <h1>Find your stunt doubles</h1>
       <AppContainer
         profileList={profileList}
         updateProfileList={updateProfileList}

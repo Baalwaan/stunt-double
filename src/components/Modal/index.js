@@ -32,7 +32,7 @@ const Modal = props => {
           <Title>List of people you have shortlisted</Title>
         )}
 
-        <CandidateList>
+        <CandidateList title="container">
           {props.shortListedStunts.map((name, acc) => {
             ++acc;
 
@@ -46,17 +46,17 @@ const Modal = props => {
                   <P>{name}</P>
                   <IconContainer>
                     <A href="http://www.google.com" target="_blank" alt="Phone">
-                      <ContactIcon src={Phone} />
+                      <ContactIcon src={Phone} title="Phone" />
                     </A>
                     <A href="http://www.google.com" target="_blank" alt="Email">
-                      <ContactIcon src={Email} />
+                      <ContactIcon src={Email} title="Email" />
                     </A>
                     <A
                       href="http://www.google.com"
                       target="_blank"
                       alt="Portfolio"
                     >
-                      <ContactIcon src={Internet} />
+                      <ContactIcon src={Internet} title="Portfolio" />
                     </A>
                   </IconContainer>
                 </Contact>
