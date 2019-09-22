@@ -16,7 +16,7 @@ const App = () => {
   );
   return (
     <>
-      <h1>Find your stunt doubles(22)</h1>
+      <h1>Find your Game of Thrones stunt doubles</h1>
       <AppContainer
         profileList={profileList}
         updateProfileList={updateProfileList}
