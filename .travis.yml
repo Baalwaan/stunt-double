@@ -5,5 +5,8 @@ script:
   - npm i -g now
   - npm run test
 
-after_success:
-  - now --prod --token=$NOW_TOKEN
+  on:
+  branch: master
+
+# after_success:
+#   - now --prod --token=$NOW_TOKEN
