@@ -31,10 +31,10 @@ Simple UI Inspired by tinder
 
 ### Tech Stack 🍔:
 
-React
-Styled-components
-Zeit
-Travis-ci
+- React
+- Styled-components
+- Zeit
+- Travis-ci
 
 ---
 
